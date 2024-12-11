@@ -1,3 +1,5 @@
+console.log("JavaScript is connected!");
+
 // Select all pages
 const home = document.getElementById("home");
 const entryPage = document.getElementById("entry-page");
