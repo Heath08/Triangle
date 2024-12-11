@@ -48,37 +48,4 @@ body {
     border-color: #ffb347 transparent transparent transparent;
 }
 
-#part-1 {
-    top: 114px;
-    border-width: 57px 100px 0 100px;
-    border-color: #7fd1b9 transparent transparent transparent;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin: 10px;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Daily Entry Page */
-textarea {
-    width: 80%;
-    height: 80px;
-    margin-top: 10px;
-    font-size: 16px;
-    padding: 10px;
-}
-
-/* Saved Dates Page */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
+#
