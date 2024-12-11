@@ -9,12 +9,15 @@
 <body>
     <!-- Home Page -->
     <div id="home">
-        <div class="triangle">
-            <div class="section" id="section-3">3</div>
-            <div class="section" id="section-2">2</div>
-            <div class="section" id="section-1">1</div>
+        <div class="triangle-container">
+            <div class="triangle">
+                <div class="triangle-part" id="part-3">3</div>
+                <div class="triangle-part" id="part-2">2</div>
+                <div class="triangle-part" id="part-1">1</div>
+            </div>
         </div>
         <button id="begin-button">Begin</button>
+        <button id="view-dates-button">View Saved Dates</button>
     </div>
 
     <!-- Daily Entry Page -->
@@ -36,6 +39,13 @@
             <button type="button" id="save-button">Save Entry</button>
         </form>
         <button id="back-button">Back to Home</button>
+    </div>
+
+    <!-- Saved Dates Page -->
+    <div id="saved-dates-page" class="hidden">
+        <h1>Saved Dates</h1>
+        <ul id="saved-dates-list"></ul>
+        <button id="back-to-home">Back to Home</button>
     </div>
 
     <script src="script.js"></script>
