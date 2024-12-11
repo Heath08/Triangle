@@ -1,16 +1,32 @@
 // Switch between pages
 const home = document.getElementById("home");
 const entryPage = document.getElementById("entry-page");
-const beginButton = document.getElementById("begin-button");
-const backButton = document.getElementById("back-button");
+const savedDatesPage = document.getElementById("saved-dates-page");
 
+const beginButton = document.getElementById("begin-button");
+const viewDatesButton = document.getElementById("view-dates-button");
+const backButton = document.getElementById("back-button");
+const backToHome = document.getElementById("back-to-home");
+
+// Navigation
 beginButton.addEventListener("click", () => {
     home.classList.add("hidden");
     entryPage.classList.remove("hidden");
 });
 
+viewDatesButton.addEventListener("click", () => {
+    home.classList.add("hidden");
+    loadSavedDates();
+    savedDatesPage.classList.remove("hidden");
+});
+
 backButton.addEventListener("click", () => {
     entryPage.classList.add("hidden");
+    home.classList.remove("hidden");
+});
+
+backToHome.addEventListener("click", () => {
+    savedDatesPage.classList.add("hidden");
     home.classList.remove("hidden");
 });
 
@@ -31,11 +47,4 @@ saveButton.addEventListener("click", () => {
     };
 
     let entries = JSON.parse(localStorage.getItem("entries")) || [];
-    entries.push(entry);
-    localStorage.setItem("entries", JSON.stringify(entries));
-
-    alert("Entry saved!");
-    document.getElementById("entry-form").reset();
-});
-
-// Future: Add a way to view saved entries
+    entries = entries.filter(e => e.date !== today); // Avoid duplicates for the same
